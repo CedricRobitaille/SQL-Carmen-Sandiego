@@ -70,11 +70,17 @@ Countries:
 (ARG) 
 (SMR)
 
-SELECT * FROM country WHERE code = 'MEX' OR code = 'PHL' or code = 'ARG' or code = 'PAN' or code = 'USA' AND region = 'South America';
+SELECT * FROM country WHERE code = 'MEX' OR code = 'PHL' or code = 'ARG' or code = 'PAN' or code = 'USA' AND continent = 'South America';
 Country: Argentina
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards the capital! 
 -- Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll follow right behind you!
+SELECT capital FROM country WHERE name = 'Mexico';
+Capital City ID: 2515
+
+SELECT * FROM city WHERE id = '2515';
+Name: Ciudad de M�xico 
+District: Distrito Federal
 
 
 
@@ -89,6 +95,8 @@ Country: Argentina
 -- I need a little more sunshine with my slice of life.
 -- So I'm off to add one to the population I find
 -- In a city of ninety-one thousand and now, eighty five.
+
+
 
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
